@@ -1,16 +1,33 @@
 import React from 'react';
-import './Banner.css';
+// import './Banner.css';
+import ImageCarousel from './ImageCarousel';
+
+const images = [
+  {
+    src: "/wp7030283-fashion-girl-wallpapers.jpg",
+    title: "Discover Your Style",
+    subtitle: "The newest styles for everyone in the family.",
+    cta: { text: "DISCOVER ", onClick: () => console.log("CTA clicked") }
+  },
+  
+  {
+    src: "/f97b17c165a877e1411f1e87d46b9d4b.jpg",
+    title: "Autumn Collection",
+    subtitle: "Stay cool and stylish this season.",
+    cta: { text: "SHOP NOW", onClick: () => console.log("Summer CTA clicked") }
+  },
+  {
+    src: "/lake-mountains.jpg",
+    title: "Trendy Accessories",
+    subtitle: "Complete your look with our latest accessories.",
+    cta: { text: "EXPLORE", onClick: () => console.log("Accessories CTA clicked") }
+  }
+];
 
 function Banner() {
   return (
     <div className="banner">
-      <img src="/wp7030283-fashion-girl-wallpapers.jpg" alt="Fashion Banner" className="img-fluid w-100" />
-      <div className="banner-text position-absolute top-50 start-50 translate-middle text-center">
-        <div className="text-box">
-          <h2 className="banner-headline">Discover Your Style</h2>
-          <p className="banner-subtext">the newest styles for everyone in the family.</p>
-        </div>
-      </div>
+      <ImageCarousel images={images} />
     </div>
   );
 }

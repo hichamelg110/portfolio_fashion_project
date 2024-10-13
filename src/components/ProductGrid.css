@@ -1,5 +1,7 @@
 .product-grid-container {
   margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .products-grid {

@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Banner.css';
+
 import ImageCarousel from './ImageCarousel';
 
 const images = [

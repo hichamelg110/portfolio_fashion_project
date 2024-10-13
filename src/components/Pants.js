@@ -3,11 +3,11 @@ import ProductGrid from './ProductGrid';
 import AddToCartPopup from './AddToCartPopup';
 import { useCart } from '../CartContext';
 
-const dresses = [
+const pantsProducts = [
 
 ];
 
-function Dresses() {
+function Pants() {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const { addToCart } = useCart();
@@ -21,8 +21,8 @@ function Dresses() {
   return (
     <>
       <ProductGrid
-        products={dresses}
-        title="Dresses"
+        products={pantsProducts}
+        title="Pants"
         onAddToCart={handleAddToCart}
       />
       {showPopup && selectedProduct && (
@@ -35,4 +35,4 @@ function Dresses() {
   );
 }
 
-export default Dresses;
+export default Pants;

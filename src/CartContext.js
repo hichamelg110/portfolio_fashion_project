@@ -1,8 +1,10 @@
 import React, { createContext, useState, useContext } from 'react';
+import products from './products';
 
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
+
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -36,7 +38,6 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-
   const addToFavorites = (product) => {
     setFavorites(prevFavorites => {
       if (!prevFavorites.find(item => item.id === product.id)) {
@@ -69,7 +70,6 @@ export const CartProvider = ({ children }) => {
     return favorites.some(item => item.id === productId);
   };
 
-
   const calculateSubtotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
@@ -89,7 +89,8 @@ export const CartProvider = ({ children }) => {
       toggleFavorite,
       isFavorite,
       calculateSubtotal,
-      calculateTotal
+      calculateTotal,
+      products
     }}>
       {children}
     </CartContext.Provider>

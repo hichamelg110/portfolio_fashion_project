@@ -4,10 +4,13 @@ import AddToCartPopup from './AddToCartPopup';
 import { useCart } from '../CartContext';
 
 const menProducts = [
-  { id: 401, name: "Men's Dress Shirt", price: 49.99, image: "/men/dress-shirt.jpg" },
-  { id: 402, name: "Chino Pants", price: 59.99, image: "/men/chinos.jpg" },
-  { id: 403, name: "Polo Shirt", price: 34.99, image: "/men/polo.jpg" },
-  { id: 404, name: "Denim Jacket", price: 79.99, image: "/men/denim-jacket.jpg" },
+  { id: 1, name: "Plain Cap In Navy", price: 5.60, originalPrice: 8.00, discount: 30, image: "/bmm96017_navy_xl.jpeg" },
+  { id: 2, name: "Iced Chunky Chain Necklace", price: 10.00, originalPrice: 28, image: "/bmm92115_silver_xl.jpeg" },
+  { id: 15, name: "Chunky Rope Lace Trainers In Black", price: 19.60, originalPrice: 28.00, discount: 30, image: "/bmm79127_black_xl.jpeg" },
+  { id: 10, name: "Long Sleeve Stretch Fit Shirt", price: 14.00, originalPrice: 20.00, discount: 30, image: "/bmm59433_white_xl.webp" },
+  { id: 4, name: "Onion Quilt Rucksack", price: 17.50, image: "/bmm91023_ecru_xl.jpeg" },
+
+
 ];
 
 function Men() {

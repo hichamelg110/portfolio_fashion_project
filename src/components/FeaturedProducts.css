@@ -1,0 +1,54 @@
+.featured-products-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  
+  .featured-products-title {
+    text-align: center;
+  }
+  
+  .products-scroll-container {
+    position: relative;
+  }
+  
+  .products-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 20px;
+    padding: 22px 0;
+  }
+  
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(201, 64, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+
+  }
+  
+  .nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .nav-arrow.left {
+    left: -40px;
+  }
+  
+  .nav-arrow.right {
+    right: -40px;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    width: 270px;
+  }

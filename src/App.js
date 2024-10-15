@@ -15,7 +15,7 @@ import Kids from './components/Kids';
 import Pants from './components/Pants';
 import Shoes from './components/Shoes';
 import Shirts from './components/Shirts';
-
+import ProductPage from './components/ProductPage';
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
             <Route path="/pants" element={<Pants />} />
             <Route path="/shoes" element={<Shoes />} />
             <Route path="/shirts" element={<Shirts />} />
-
+            <Route path="/product/:id" element={<ProductPage />} />
           </Routes>
         </div>
       </Router>

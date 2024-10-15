@@ -1,0 +1,95 @@
+.product-page {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-images {
+    flex: 0.8;
+    margin-right: 20px;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  
+  .thumbnail.active {
+    border-color: #007bff;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .price {
+    font-size: 6em;
+    font-weight: bold;
+    margin-bottom: 28px;
+  }
+  
+  .size-selection {
+    margin-bottom: 20px;
+  }
+  
+  .size-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .size-button {
+    padding: 10px 15px;
+    border: 1px solid #cacaca;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .size-button.selected {
+    background-color: #07456b;
+    color: white;
+  }
+  
+  .add-to-cart, .add-to-favorite {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .add-to-cart {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+  }
+  
+  .add-to-favorite {
+    background-color: rgb(255, 255, 255);
+    color: #0e0b0b;
+    border: 1px solid #382f2f;
+  }
+  
+  .add-to-favorite.favorited {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  }
+  
+  .product-description {
+    margin-top: 20px;
+  }

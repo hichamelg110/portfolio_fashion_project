@@ -12,7 +12,7 @@ const imageCarouselStyles = {
     width: '100%',
     height: '100%',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: '50% 16%',
   },
 };
 

@@ -4,7 +4,6 @@ import AddToCartPopup from './AddToCartPopup';
 import { useCart } from '../CartContext';
 
 const pantsProducts = [
-
 ];
 
 function Pants() {

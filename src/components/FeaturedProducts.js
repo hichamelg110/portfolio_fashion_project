@@ -40,7 +40,7 @@ function FeaturedProducts() {
   };
 
   return (
-    <div className="featured-products-container">
+    <div className="featured-products-container" id="featuredProducts">
       <h2 className="featured-products-title">Featured Products</h2>
       <div className="products-scroll-container">
         <button className="nav-arrow left" onClick={() => scroll('left')}>&lt;</button>

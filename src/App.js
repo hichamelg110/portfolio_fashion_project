@@ -16,12 +16,16 @@ import Pants from './components/Pants';
 import Shoes from './components/Shoes';
 import Shirts from './components/Shirts';
 import ProductPage from './components/ProductPage';
+import Login from './components/Login';
+
 
 function App() {
   return (
     <CartProvider>
       <Router>
+        
         <div className="App">
+          
           <Header />
           <Routes>
             <Route path="/" element={
@@ -41,6 +45,17 @@ function App() {
             <Route path="/shoes" element={<Shoes />} />
             <Route path="/shirts" element={<Shirts />} />
             <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/login" element={<Login />} />
+
+
+
+
+
+
+
+
+
+
           </Routes>
         </div>
       </Router>

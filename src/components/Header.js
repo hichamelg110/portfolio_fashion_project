@@ -24,7 +24,7 @@ const Header = () => {
             </button>
           </div>
           <div className="header-icons">
-            <Link to="/account" className="header-icon">
+            <Link to="/login" className="header-icon">
               <i className="fas fa-user"></i>
             </Link>
             <Link to="/favorites" className="header-icon">

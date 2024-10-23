@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from '../CartContext';
 import './ProductPage.css';
@@ -8,6 +8,7 @@ const ProductPage = () => {
   const { addToCart, toggleFavorite, isFavorite } = useCart();
   const [selectedSize, setSelectedSize] = useState('');
   const [mainImage, setMainImage] = useState(0);
+  const [showNotification, setShowNotification] = useState(false);
 
   const { products } = useCart();
 
@@ -20,6 +21,7 @@ const ProductPage = () => {
   const handleAddToCart = () => {
     if (selectedSize) {
       addToCart({ ...product, size: selectedSize });
+      setShowNotification(true);
     } else {
       alert('Please select a size');
     }
@@ -31,6 +33,11 @@ const ProductPage = () => {
 
   return (
     <div className="product-page">
+      <Notification 
+  message="Product added to cart"
+  isVisible={showNotification}
+  onHide={() => setShowNotification(false)}
+/>
       <div className="product-images">
         <img 
           src={product.images[mainImage]} 
@@ -83,5 +90,23 @@ const ProductPage = () => {
     </div>
   );
 };
+
+const Notification = ({ message, isVisible, onHide }) => {
+  useEffect(() => {
+    if (isVisible) {
+      const timer = setTimeout(onHide, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible, onHide]);
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="notification success">
+      {message}
+    </div>
+  );
+};
+
 
 export default ProductPage;
